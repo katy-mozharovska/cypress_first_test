@@ -1,6 +1,6 @@
 //<reference types="cypress" />
 
-describe('Your Second Test', () => {
+describe('Users can', () => {
   let user;
 
   before(function () {
@@ -9,7 +9,7 @@ describe('Your Second Test', () => {
     });
   });
 
-  it('Sign up with faker', () => {
+  it('sign up filling all mandatory fields in the registration form with valid data', () => {
     cy.visit('https://react-redux.realworld.io/#/register?_k=luy0fu');
     cy.get(':nth-child(1) > .form-control').type(user.username).should('have.value', user.username);
     cy.get(':nth-child(2) > .form-control').type(user.email).should('have.value', user.email);
